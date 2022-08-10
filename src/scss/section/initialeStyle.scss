@@ -1,0 +1,71 @@
+@import "../mixin.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth; 
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+h2{
+    @include Cardo-font-italic-xl;
+    @media (max-width: 1024px) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+h3{
+    @include Raleway-font-normal-xl;
+    @media (max-width: 1024px) {
+        @include Raleway-font-normal-xm;
+    }
+    @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+h4{
+    @include Raleway-font-normal-xxm;
+    @media (max-width: 1024px) {
+        @include Raleway-font-normal-m;
+    }
+    @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+p{
+    @include Raleway-font-normal-s;
+    @media (max-width: 1024px) {
+        @include Raleway-font-normal-xxs;
+    }
+}
+
+.header__banner{
+    position: relative;
+    background-image: url(../image/img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::after{
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        background: #252B49;
+        opacity: 0.8;
+        z-index: 1;
+    }
+    @media (max-width: 768px) {
+        background-position: bottom;
+    }
+}

@@ -1,0 +1,95 @@
+.people .content{
+    padding: 114px 0;
+    @media (max-width:1024px) {
+        padding: 78px 0;
+    }
+    @media (max-width:768px) {
+        padding: 35px 0;
+        align-items: center;
+        flex-direction: initial;
+        justify-content: space-around;
+    }
+    .content_people{
+        width: 24%;
+        text-align: start;
+        @media (max-width:768px) {
+            width: 280px;
+            position: relative;
+        }
+        &__face{
+            width: 100%;
+            @media (max-width:1024px) {
+                margin:22px 0 29px;
+            }
+            @media (max-width:768px) {
+                position: relative;
+                object-fit: cover;
+                width: 280px;
+                height: 227px;
+            }      
+        }
+        &__title{
+            padding: 1px 0;
+            margin: 30px 0 5px;
+            @media (max-width:768px) {
+                padding: 2px 0;
+                margin: 25px 0 5px;
+            }
+        }
+        &__subtitle{
+            color: $red;
+            text-transform: uppercase;
+        }
+        &__text{
+            margin:17.8px 0 38px;
+            color: $grey;
+            @media (max-width:1024px) {
+                margin:38px 0 55px;
+            }
+            @media (max-width:768px) {
+                
+                margin:22px 0 39px;
+            }
+        }
+        &__link {
+            & img {
+                @media (max-width:1024px){
+                    & img{
+                        width: 33px;
+                        height: 33px;
+                    }
+                }
+                @media (max-width:768px) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+        &__link:not(:first-child){
+            padding-left: 2px;
+        }
+    }    
+}
+// @media (max-width:768px){
+//     .people .content{
+        
+//         .content_people{
+            
+//             
+//             &__face{
+                
+//             }
+//             &__title{
+                
+//             }
+//             &__text{
+                
+//             }           
+//             &__link{
+//                 & img{
+                    
+//                 }
+//             }
+//         }    
+//     }
+// }

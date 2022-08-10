@@ -1,0 +1,97 @@
+@import "../mixin.scss";
+
+.header_content {
+    @include flex-wrap-between;
+    z-index: 6;
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid $headerBorder;
+    @media (max-width:768px) {
+        border: none;
+    }
+    &__logo{
+        width: 30%; 
+        @media (max-width:768px) {
+            & img{
+                width: 170px;
+                height: 76px;
+            }
+        }      
+    }
+}
+@media (max-width:768px) {
+    .header_fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color:$background;
+        width: 100%;
+        padding: 0 15px;
+        z-index: 6;
+    } 
+}
+   
+.header_nav{
+    width: 70%;
+    @media (max-width:768px) {
+        display: none;
+    }
+    &__list{
+        display: flex;
+        justify-content: flex-end;            
+        .nav__list{
+            width: 100%;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            &::after{
+                position: absolute;
+                content: "";
+                top: 0;
+                right: 0;
+                bottom: -43px;
+                left: 0;
+                border-bottom: 3px solid $headerBorder;
+                opacity: 0;
+            }
+            &:hover::after{
+                opacity: 1;
+            }
+            &:active::after{
+                border-bottom: 3px solid $redHover;
+                opacity: 1;
+            }
+            .list{
+                @include Raleway-font-normal-xxs;
+                position: relative;
+                z-index: 2;
+                font-weight: bold;
+                color: $white;
+                text-transform: uppercase;
+                @media (max-width:768px) {
+                    font-size: 9px;
+                }
+            }
+            &:active .list{
+                color: $redHover;
+            }
+            @media (max-width:1024px) {
+                width: 19.625%;
+                &::after{
+                    bottom: -43px;
+                }
+            }
+            @media (max-width:768px) {
+            &::after{
+                bottom: -31px;
+                }   
+            }                             
+        }            
+    }
+} 
+.burger-menu_nav__list.active a{
+    color: $redHover;
+}
+.burger-menu_link:active{
+    color: $redHover;
+}

@@ -1,0 +1,97 @@
+.slide{
+    overflow: hidden;
+    &_slick{
+        &__content{
+            display: flex;
+            overflow: hidden;
+            @media (max-width:1024px) {
+                height: 332px;
+            }
+            @media (max-width:768px) {
+                flex-direction: column;
+                height: 100%;
+                font-size: 0;
+            }
+        }
+        &__img{
+            width: 50%;
+            @media (max-width:768px) {
+                width: 100%;
+            }
+            & img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__text{
+            @include flex-center;
+            background-color: $backgroundSlide;
+            width: 50%;
+            flex-direction: column;
+            align-items: center;
+            @media (max-width:768px) {
+                width: 100%;
+                height: 326px;     
+            }
+            & p{
+                @include Raleway-font-normal-s;
+                text-transform: uppercase;
+                color: $white;
+                padding: 7px 0;
+                width: 60%;
+                @media (max-width:1024px) {
+                    @include Raleway-font-normal-xxs;
+                    padding: 3px 0;
+                }
+            }
+        }
+        &__title{
+            padding: 17px 0;
+            max-width: 61%;
+            @media (max-width:1024px) {
+                padding: 14px 0;
+            }
+        }
+        & .slick-dots{
+            @include flex-center;
+            align-items: center;
+            margin-top: 24px;
+            @media (max-width:1024px) {
+                margin-top: 14px;
+            }
+            @media (max-width:768px) {
+                margin-top: 14px;
+            }
+        }
+    }  
+}
+.slick-track{
+    display: flex;
+}
+.slide_slick .slick-dots button{
+    font-size: 0;
+    width: 14px;
+    height: 14px;
+    background-color: $white;
+    border: 1px solid $backgroundSlide;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 25px;
+    @media (max-width:1024px) {
+        width: 14px;
+        height: 14px;
+        margin-left: 25px;
+    }
+    @media (max-width:768px) {
+        width: 9px;
+        height: 9px;
+        margin-left: 20px;     
+    }
+}
+.slide_slick .slick-dots li.slick-active button{
+    background-color: $backgroundSlide;
+}
+.slide_slick .slick-arrow{
+    font-size: 0;
+    display: none !important;
+}

@@ -1,0 +1,90 @@
+@import "../variables.scss";
+@import "../mixin.scss";
+@import "../fonts.scss";
+
+.banner .content{
+    padding: 130px 0 120px;
+    position: relative;
+    z-index: 2;
+    @media (max-width:1024px) {
+        padding: 157px 0 126px;
+    }
+    @media (max-width:768px) {
+        padding: 50px 0 52px;
+    }
+    
+
+}
+.content{
+    @include flex-wrap-between;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    @media (max-width:768px) {
+        flex-direction: column;
+    }
+    &__title{
+        @include Raleway-font-normal-xxl;
+        color: $white;
+        @media (max-width:1024px) {
+            font-size: 48px;
+            line-height: 56px;
+        }
+        @media (max-width:768px) {
+            font-size: 36px;
+            line-height: 42px;
+        }
+    }
+    &__subtitle{
+        @include Raleway-font-normal-l;
+        color: $white;
+        margin: 32px 0 82px;
+        width: 100%;
+        @media (max-width:1024px) {
+            font-size: 18px;
+            line-height: 21px;
+            padding: 10px 105px;
+            margin: 62px 0 92px;
+        }
+        @media (max-width:768px) {
+            font-size: 14px;
+            line-height: 16px;
+            padding: 0;
+            margin: 33px 0 51px;
+        }
+    }
+    &_button{
+        width: 369px;
+        padding: 26px 0;
+        transition: 0.3s;
+        text-align: center;
+        background-color: $red;
+        cursor: pointer;
+        margin: 0 auto;
+        @media (max-width:1024px) {
+            width: 313px;
+            padding: 26px 0;
+        }
+        @media (max-width:768px) {
+            width: 280px;
+            padding: 16px 0;
+        }
+        &:hover{
+            background: $redHover;
+        }
+        &:active{
+            background: $red;
+            box-shadow: 4px 4px 30px $red;
+        }
+        &__btn{
+            @include Raleway-font-normal-l;
+            color: $white;
+            text-transform: uppercase;
+            @media (max-width:1024px) {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+

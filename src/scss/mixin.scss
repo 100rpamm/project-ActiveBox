@@ -1,0 +1,84 @@
+@import "variables.scss";
+
+@mixin Raleway-font-normal-xxl {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: $fs-xxl;
+  line-height: $lh-xxl;
+  text-transform: uppercase;
+}
+
+@mixin Cardo-font-italic-xl {
+  font-family: 'Cardo', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: $fs-xl;
+  line-height: $lh-xl;
+  text-transform: capitalize;
+}
+
+@mixin Raleway-font-normal-xl {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $fs-l;
+  line-height: $lh-l;
+}
+
+@mixin Raleway-font-normal-l {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: $fs-m;
+  line-height: $lh-s;
+}
+
+@mixin Raleway-font-normal-xxm {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: $fs-m;
+  line-height: $lh-s;
+}
+
+@mixin Raleway-font-normal-xm {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fs-m;
+  line-height: $lh-s;
+}
+
+@mixin Raleway-font-normal-m {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: $fs-s;
+  line-height: $lh-xs;
+}
+
+@mixin Raleway-font-normal-s {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fs-s;
+  line-height: $lh-xs;
+}
+
+@mixin Raleway-font-normal-xxs {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $fs-xs;
+  line-height: $lh-xxs;
+}
+
+@mixin flex-wrap-between {
+  display: flex;  
+  justify-content: space-between;
+}
+@mixin flex-center{
+  display: flex;  
+  justify-content: center;
+}

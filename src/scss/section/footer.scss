@@ -1,0 +1,98 @@
+.footer{
+    background: $backgroundFooter;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    &_content{
+        background: $backgroundFooterTwo;
+        &__text{
+            width: 31.625%;
+            margin: 0 auto;
+            padding: 24px 0;
+            @media (max-width:1024px)  {
+                width: 31.625%;
+                margin: 0 auto;
+                padding: 14.5px 0;
+            }
+            @media (max-width:768px) {
+                width: 100%;
+                padding: 29px 0;
+            }
+        }
+        &__subtitle{
+            color: $grey;
+            & span{
+            color: $white;
+            }
+        }
+    }
+}
+.footer_block{
+    @include flex-wrap-between;
+    padding: 71px 0 67px;
+    text-align: center;
+    width: 100%;
+    @media (max-width:1024px)  {
+        padding: 46px 0 38px;
+    }
+    @media (max-width:768px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 34px 0;
+    }
+    &__content{
+        width: 32%;
+        &:not(:last-child){
+            @media (max-width:768px)  {
+                margin-bottom: 69px;
+
+            }            
+        }
+    }
+    &__title{
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 29px;
+        @media (max-width:1024px)  {
+            margin-bottom: 17px;
+        }
+        @media (max-width:768px) {
+            margin-bottom: 34px; 
+        }
+        &.two{
+            margin-bottom: 49px;
+            @media (max-width:1024px)  {
+                margin-bottom: 33px; 
+            }
+            @media (max-width:768px) {
+                margin-bottom: 37px;
+            }
+        }
+    }
+    & img {
+        @media (max-width:1024px)  {
+            height: 33px;
+            width: 33px;
+        }
+        @media (max-width:768px) {
+            height: 33px;
+            width: 33px;
+            margin-bottom: 59px;
+        }
+    }
+    &__subtitle{
+        text-transform: capitalize;
+        color: $white;
+    }
+    &__link:not(:first-child, :last-child){
+        margin: 0 26px;
+        @media (max-width:1024px)  {
+            margin: 0 22px;
+        }
+        @media (max-width:768px) {
+            margin: 0 12px;
+        }
+    }
+}
