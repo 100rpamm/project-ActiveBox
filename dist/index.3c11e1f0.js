@@ -39,7 +39,7 @@ $('a[href^="#"]').on("click", function(e) {
     e.preventDefault();
     const anchor = $(this).attr('href');
     $('html, body').stop().animate({
-        scrollTop: $(anchor).offset().top - 100
+        scrollTop: $(anchor).offset().top - 80
     }, 800);
 });
 
