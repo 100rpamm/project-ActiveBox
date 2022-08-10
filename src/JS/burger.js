@@ -56,13 +56,10 @@ $(window).on('scroll', function () {
     });
 });
 
-nav.find('a').on('click', function () {
-    const $el = $(this),
-    id = $el.attr('href');
-    
-    $('html, body').animate({
-        scrollTop: $(id).offset().top - nav_height
-    }, 500);
-    
-    return false;
+$('a[href^="#"]').on("click", function(e){
+    e.preventDefault();
+    const anchor = $(this).attr('href');
+    $('html, body').stop().animate({
+        scrollTop: $(anchor).offset().top - 100
+    }, 800);
 });
