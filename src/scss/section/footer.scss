@@ -46,8 +46,10 @@
         &:not(:last-child){
             @media (max-width:768px)  {
                 margin-bottom: 69px;
-
             }            
+        }
+        @media (max-width:768px)  {
+            width: 60%;
         }
     }
     &__title{

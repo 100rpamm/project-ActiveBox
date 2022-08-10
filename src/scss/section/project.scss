@@ -1,13 +1,13 @@
 .project .content {
+    cursor: pointer;
+    font-size: 0;
     @media (max-width:768px) {
-        font-size: none;
         flex-direction: inherit;
     }    
 }
 .project_content{
     width: 25%;
     position: relative;
-    font-size: 0;
     @media (max-width:768px) {
         width: 50%;
     }
@@ -23,7 +23,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        border: 2px solid $white;
+        border: 1px solid $white;
         background: rgba(255, 67, 67, 0.8);
         flex-direction: column;
         &:hover{
@@ -35,8 +35,9 @@
         }
     }    
     &__title{
-        margin-bottom: 20.57px;
+        margin-bottom: 20px;
         padding: 16px 0;
+        font-weight: 900;
         @media (max-width:1024px) {
             margin-bottom: 13px;
             padding: 10px 0;
@@ -46,7 +47,7 @@
             padding: 2px 0;
         }
         & a{
-            font-weight: 900;
+            
             text-transform: uppercase;
             color: $white;
         }

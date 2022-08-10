@@ -31,7 +31,7 @@
             align-items: center;
             @media (max-width:768px) {
                 width: 100%;
-                height: 326px;     
+                min-height: 326px;
             }
             & p{
                 @include Raleway-font-normal-s;
@@ -40,8 +40,12 @@
                 padding: 7px 0;
                 width: 60%;
                 @media (max-width:1024px) {
-                    @include Raleway-font-normal-xxs;
+                    font-size: 16px;
                     padding: 3px 0;
+                }
+                @media (max-width:768px) {
+                    font-size: 12px;
+                    line-height: 16px;
                 }
             }
         }
@@ -50,6 +54,10 @@
             max-width: 61%;
             @media (max-width:1024px) {
                 padding: 14px 0;
+                font-size: 20px;
+            }
+            @media (max-width:768px) {
+                font-size: 18px;
             }
         }
         & .slick-dots{
@@ -70,11 +78,12 @@
 }
 .slide_slick .slick-dots button{
     font-size: 0;
-    width: 14px;
-    height: 14px;
+    align-items: center;
+    width: 18px;
+    height: 18px;
     background-color: $white;
     border: 1px solid $backgroundSlide;
-    border-radius: 50px;
+    border-radius: 50%;
     cursor: pointer;
     margin-left: 25px;
     @media (max-width:1024px) {
@@ -90,6 +99,16 @@
 }
 .slide_slick .slick-dots li.slick-active button{
     background-color: $backgroundSlide;
+    width: 23px;
+    height: 23px;
+    @media (max-width:1024px) {
+        width: 18px;
+        height: 18px;
+    }
+    @media (max-width:768px) {
+        width: 12px;
+        height: 12px;   
+    }
 }
 .slide_slick .slick-arrow{
     font-size: 0;

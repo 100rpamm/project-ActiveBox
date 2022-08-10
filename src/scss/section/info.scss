@@ -9,9 +9,12 @@
     }
 }  
 .content_block{
-    width: 31.625%;
+    width: 32%;
     @media (max-width:768px) {
         width: 220px;
+        &:not(last-child) {
+            margin-bottom: 50px;
+        }
     }
     &__title{
         text-transform: uppercase;
@@ -23,7 +26,7 @@
         }
         @media (max-width:768px) {
             padding: 11px 0;
-            margin: 21px 0 0; 
+            margin: 0; 
         }
     }
     &__subtitle{
@@ -31,9 +34,6 @@
         margin-bottom: 88;
         @media (max-width:1024px) {
             margin-bottom: 41px;
-        }
-        @media (max-width:768px) {
-            margin-bottom: 4px;
         }
     }
     & img {
