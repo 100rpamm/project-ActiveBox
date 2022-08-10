@@ -12,7 +12,7 @@
     width: 32%;
     @media (max-width:768px) {
         width: 220px;
-        &:not(last-child) {
+        &:not(:last-child) {
             margin-bottom: 50px;
         }
     }
@@ -34,6 +34,9 @@
         margin-bottom: 88;
         @media (max-width:1024px) {
             margin-bottom: 41px;
+        }
+        @media (max-width:500px) {
+            margin-bottom: 0;
         }
     }
     & img {

@@ -479,7 +479,7 @@ p {
     width: 220px;
   }
 
-  .content_block:not(last-child) {
+  .content_block:not(:last-child) {
     margin-bottom: 50px;
   }
 }
@@ -512,6 +512,12 @@ p {
 @media (max-width: 1024px) {
   .content_block__subtitle {
     margin-bottom: 41px;
+  }
+}
+
+@media (max-width: 500px) {
+  .content_block__subtitle {
+    margin-bottom: 0;
   }
 }
 
